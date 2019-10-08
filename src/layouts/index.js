@@ -1,22 +1,18 @@
-import React, {useContext} from 'react';
+import React, {useContext, createContext} from 'react';
 import {BrowserRouter as Router, Switch, Route, Link, Redirect} from "react-router-dom";
+import Home from "./components/home";
+import './style.sc.scss';
 
 function Layout(props, ref) {
-    // const components = require.context('./components', false, /\.js$/);
-    // console.log(components);
-    // console.log(components.key());
-    // const modules = components.key().reduce((modules, modulePath) => {
-    //
-    // }, {})
-
-    // console.log('components', components);
-
+    // console.log('props', props);
     return (
         <div>
             layout page
-            {/*<Router>*/}
-            {/*    <Switch></Switch>*/}
-            {/*</Router>*/}
+            <Router>
+                <Switch>
+                    <Route path={`${props.match.url}/home`} component={Home}/>
+                </Switch>
+            </Router>
         </div>
     )
 }

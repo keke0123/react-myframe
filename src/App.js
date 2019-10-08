@@ -9,8 +9,12 @@ function App() {
     return (
         <div className="App">
             App Page
-            <Redirect exact from={'/'} to={'/main'}/>
-            <Route path={`/main`} component={Layout}></Route>
+            <Router>
+                <Switch>
+                    <Redirect exact from={'/'} to={'/main'}/>
+                    <Route path={`/main`} component={Layout}></Route>
+                </Switch>
+            </Router>
         </div>
     );
 }
