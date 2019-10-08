@@ -33,6 +33,7 @@
     ]
   },
   "devDependencies": {
+    "dotenv": "^8.1.0",
     "node-sass": "^4.12.0",
     "redux-devtools": "^3.5.0",
     "sass-loader": "^8.0.0"
